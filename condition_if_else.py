@@ -1,10 +1,10 @@
-age: int = 15
+age: int = 61
 
-if age >= 18:
-    print('you are eligible to register')
-elif age >= 16:
-    print('you are alomost')
-else:
-    print('you are not eligible to register')
+if age < 18:
+    print('You are minor')
+elif age >= 18 and age < 60:
+    print('you are middle age')
+elif age > 60:
+    print('you are senior citizen')
 
 print('Thanks for visiting')
