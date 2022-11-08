@@ -40,3 +40,4 @@ def unknown_prod(**kwarg: Any) -> None:
 
 
 unknown_prod(name='macbook air', release='2020', chip='M1')
+unknown_prod(name='macbook pro', release='2022', chip='M2')
