@@ -41,3 +41,13 @@ def unknown_prod(**kwarg: Any) -> None:
 
 unknown_prod(name='macbook air', release='2020', chip='M1')
 unknown_prod(name='macbook pro', release='2022', chip='M2')
+
+
+def invoice(product: str, *arg, **kwarg) -> None:
+    print(product)
+    print(arg)
+    print(kwarg)
+
+
+invoice('shoe', 'air jordan', 'gucci',
+        size="XL", color="black", model="12HJSH")
