@@ -34,3 +34,28 @@ def universal_grreting(name: str, greeting: Callable[[str], str]) -> None:
 universal_grreting('Tareq', night)
 universal_grreting('Tareq', morning)
 universal_grreting('Tareq', noon)
+
+
+# fn return fn
+
+def add_by_5(num: int) -> Callable[[], int]:
+    def by_5() -> int:
+        return num + 5
+
+    return by_5
+
+
+sum = add_by_5(15)
+
+print(sum())
+
+
+def unique_adder(num1: int) -> Callable[[int], int]:
+    def adder(num2: int) -> int:
+        return num1 + num2 - 1
+    return adder
+
+
+addr = unique_adder(10)
+print(addr(6))
+print(addr(20))
